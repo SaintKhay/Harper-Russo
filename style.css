@@ -507,6 +507,89 @@ body {
   color: #191919;
 }
 
+/*******************************/
+/*FOOTER SECTION */
+/*******************************/
+.footer {
+  padding: 12.8rem 3.2rem;
+  border-top: 1px solid #eee;
+  background-color: #a5e3d6;
+  /* justify-content: center; */
+}
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo {
+  display: flex;
+  gap: 1.2rem;
+  /* margin-bottom: 1.2rem; */
+  align-items: center;
+}
+.footer-logo-w {
+  width: 30%;
+  justify-self: start;
+}
+.footer-logo-t {
+  text-decoration: none;
+  color: inherit;
+}
+.social-icons {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.footer-header {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.contacts {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+.address {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.copyright {
+  margin-top: auto;
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+.footer-nav {
+  list-style: none;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  color: #767676;
+  transition: all 0.4s;
+  font-size: 1.6rem;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
 /* - SPACING SYSTEM (px):
  2   /  4  /  8  /  12  /  16  /  24  /  32  /  48  /  64  /  80  /  96  /   128
 */
