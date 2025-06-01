@@ -5,7 +5,9 @@
   font-size: 1.6rem;
   line-height: 1.6;
 }
-
+.c-align {
+  text-align: center;
+}
 .features,
 .testimonials {
   width: 80%;

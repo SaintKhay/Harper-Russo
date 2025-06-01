@@ -111,9 +111,10 @@ body {
 /*******************************/
 /* ARTICLE */
 /*******************************/
-article {
+.article-section article {
   margin: 9.6rem;
 }
+
 .article-content,
 .article-second-content {
   display: grid;
@@ -258,19 +259,21 @@ article {
 .customer-testimonial,
 .customer-name,
 .customer-office {
-  padding: 1.6rem 0;
-  font-size: 1.6rem;
+  padding: 2.4rem 0;
+  font-size: 1.8rem;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 350;
   text-align: center;
 }
 .customer-name,
 .customer-office {
   padding: 0;
   font-size: 1.4rem;
+  font-weight: 400;
 }
 .customer-name {
   padding-top: 2rem;
+  font-weight: 400;
 }
 
 .t-color-first {
@@ -282,6 +285,228 @@ article {
 .t-color-third {
   background-color: #f6fcfb;
 }
+/*******************************/
+/* BLOG SECTION */
+/*******************************/
+
+.latest-posts {
+  padding: 6rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.blog-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  color: #333;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding-bottom: 2, 4rem;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.post-info {
+  padding: 2rem;
+}
+
+.post-category {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #2196f3;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.post-title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  font-size: 1rem;
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+}
+/*******************************/
+/* FAQ SECTION */
+/*******************************/
+.faq-section {
+  padding: 9.6rem 0 0rem 0;
+}
+.faq-first-content {
+  margin-bottom: 6.4rem;
+}
+.faq {
+  max-width: 50rem;
+  margin: 0 auto;
+
+  text-align: center;
+}
+.faq span {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+.faq-head {
+  font-size: 1.4rem;
+}
+.faq-icon,
+.questions-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.questions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem;
+  background-color: #f6fcfb;
+  max-width: 70rem;
+  margin: 2rem auto;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+.faq-questions {
+  font-size: 2rem;
+}
+.questions-container:hover {
+  background-color: #c5cac9;
+}
+
+/*******************************/
+/* CTA SECTION */
+/*******************************/
+.cta-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(img/cta\ image.jpg);
+  background-size: cover; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cta-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: #ffffff10;
+  padding: 6rem 4rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  max-width: 90rem;
+  width: 90%;
+  height: 70vh;
+  background-image: url(img/cta\ image.jpg);
+  background-size: cover;
+}
+
+.cta-icon img {
+  width: 6rem;
+  margin-bottom: 20px;
+}
+
+.cta-heading {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.cta-text {
+  color: #191919;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.cta-form {
+  display: flex;
+  padding: 1.2rem 2.4rem;
+  justify-content: space-between;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.cta-form input[type="email"] {
+  padding: 2rem 1.6rem;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  outline: none;
+  background-color: #000;
+  width: 70%;
+}
+#cta-input::placeholder {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+.cta-form button {
+  background-color: #ffb703;
+  color: #003459;
+  padding: 1.2rem 3.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-form button:hover {
+  background-color: #ffa200;
+}
+.cta-fs {
+  font-size: 5.2rem;
+  font-weight: 400;
+  color: #191919;
+}
+
 /* - SPACING SYSTEM (px):
  2   /  4  /  8  /  12  /  16  /  24  /  32  /  48  /  64  /  80  /  96  /   128
 */
