@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #2f2f2f;
@@ -247,8 +247,9 @@ body {
   justify-self: center;
   border-radius: 100%;
   position: absolute;
-  top: -9%;
-  left: 33%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .testimonial-container {
   padding: 4.8rem 4rem;
@@ -389,23 +390,39 @@ body {
 }
 .faq-icon,
 .questions-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
 }
-
+/* .questions-icon[name='add-circle-outline'] {
+  display: none;
+} */
+/* .questions-icon[name='remove-outline'] {
+  display: none;
+} */
 .questions-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 3.2rem;
   background-color: #f6fcfb;
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 2rem auto;
   border-radius: 50px;
   transition: all 0.5s;
 }
+.questions-container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questions-container div span {
+  max-width: 85%;
+}
 .faq-questions {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.faq-answer {
   font-size: 2rem;
+  padding-top: 1.6rem;
+  line-height: 1.6;
 }
 .questions-container:hover {
   background-color: #c5cac9;
@@ -472,7 +489,7 @@ body {
   margin: 0 auto;
 }
 
-.cta-form input[type="email"] {
+.cta-form input[type='email'] {
   padding: 2rem 1.6rem;
   border: none;
   color: #ffffff;
