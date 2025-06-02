@@ -18,6 +18,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #2f2f2f;
+  max-width: 100vw;
   background-color: #e7e7e9;
 }
 
@@ -68,13 +69,12 @@ body {
 .header-sub-content {
   background-color: rgba(222, 231, 228, 0.445);
   backdrop-filter: blur(10px);
-  width: 50%;
+  max-width: 50%;
   border-radius: 24px;
   padding: 4.8rem;
   position: absolute;
   top: 70%;
   left: 50%;
-  /* transform: translate(-5%, -30%); */
   transform: translate(-50%, -50%);
 }
 .header-sub-content span {
@@ -104,7 +104,7 @@ body {
 }
 
 .btn {
-  margin-top: 2rem;
+  margin-top: 5rem;
   text-align: center;
 }
 
