@@ -1,0 +1,150 @@
+<!-- <section class="testimonial-section" id="section--4">
+        <div class="t--icons">
+          <ion-icon
+            class="testimonial-icon t--scroll"
+            name="caret-back-outline"
+          ></ion-icon>
+          <ion-icon
+            class="testimonial-icon t--scroll"
+            name="caret-forward-outline"
+          ></ion-icon>
+        </div>
+        <div class="testimonials testimonial__first">
+          <div class="testimonial-container t-color-first">
+            <img
+              src="img/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+              class="testimonial-img"
+              alt="An image of JADON DOE a customer"
+            />
+            <p class="customer-testimonial">
+              "A Clean Office Means a Happier Team! We've been flooded with
+              praise from clients about how well-organized our office looks.
+              It's had a huge positive impact on our team's morale and work
+              environment"
+            </p>
+            <p class="customer-name">JADON DOE</p>
+            <p class="customer-office">GLOBAL INNOVATIONS</p>
+          </div>
+          <div class="testimonial-container t-color-second">
+            <img
+              class="testimonial-img"
+              src="img/alex-suprun-mynsNaNwVDc-unsplash.jpg"
+              alt="An image of SARAH LEE a customer"
+            />
+            <p class="customer-testimonial">
+              "Professional and Thorough! Our office has never looked this good!
+              The cleaning team is always on time and pays special attention to
+              high-traffic areas — just what we needed. Excellent service at a
+              great price!"
+            </p>
+            <div>
+              <p class="customer-name">SARAH LEE</p>
+            </div>
+            <p class="customer-office">HOME OWNER</p>
+          </div>
+          <div class="testimonial-container t-color-first">
+            <img
+              class="testimonial-img"
+              src="img/sabbir-ahmed-n3dHcYWJcs8-unsplash.jpg"
+              alt="An image of MATHIUS SAM a customer"
+            />
+            <p class="customer-testimonial">
+              "Game-Changer for Our Home! As a busy mum, staying on top of
+              chores felt impossible — but this cleaning service has truly been
+              a lifesaver. The team is incredibly kind, professional, and
+              respectful"
+            </p>
+            <p class="customer-name">MATHIUS SAM</p>
+            <p class="customer-office">BRIDGETON</p>
+          </div>
+        </div>
+
+        <div class="testimonials testimonial__second hidden">
+          <div class="testimonial-container t-color-second">
+            <img
+              class="testimonial-img"
+              src="img/alex-suprun-mynsNaNwVDc-unsplash.jpg"
+              alt="An image of SARAH LEE a customer"
+            />
+            <p class="customer-testimonial">
+              "Professional and Thorough! Our office has never looked this good!
+              The cleaning team is always on time and pays special attention to
+              high-traffic areas — just what we needed. Excellent service at a
+              great price!"
+            </p>
+            <div>
+              <p class="customer-name">SARAH LEE</p>
+            </div>
+            <p class="customer-office">HOME OWNER</p>
+          </div>
+          <div class="testimonial-container t-color-first">
+            <img
+              class="testimonial-img"
+              src="img/sabbir-ahmed-n3dHcYWJcs8-unsplash.jpg"
+              alt="An image of MATHIUS SAM a customer"
+            />
+            <p class="customer-testimonial">
+              "Game-Changer for Our Home! As a busy mum, staying on top of
+              chores felt impossible — but this cleaning service has truly been
+              a lifesaver. The team is incredibly kind, professional, and
+              respectful"
+            </p>
+            <p class="customer-name">MATHIUS SAM</p>
+            <p class="customer-office">BRIDGETON</p>
+          </div>
+          <div class="testimonial-container t-color-first">
+            <img
+              src="img/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+              class="testimonial-img"
+              alt="An image of JADON DOE a customer"
+            />
+            <p class="customer-testimonial">
+              "A Clean Office Means a Happier Team! We've been flooded with
+              praise from clients about how well-organized our office looks.
+              It's had a huge positive impact on our team's morale and work
+              environment"
+            </p>
+            <p class="customer-name">JADON DOE</p>
+            <p class="customer-office">GLOBAL INNOVATIONS</p>
+          </div>
+        </div>
+
+        <div class="t--icons t--icons-edit">
+          <ion-icon
+            class="t_icon--s t_icon--s"
+            name="radio-button-off-outline"
+          ></ion-icon>
+          <ion-icon
+            class="t_icon--s"
+            name="radio-button-off-outline"
+          ></ion-icon>
+          <ion-icon class="t_icon--s" name="radio-button-on-outline"></ion-icon>
+        </div>
+      </section> -->
+
+testimonial.addEventListener('click', function (e) { e.preventDefault(); const
+clicked = e.target.closest('.btn__testimonial'); if (!clicked) return; // Remove
+current carousel[currentIndex].classList.remove('carousel-active'); if
+(currentIndex < carousel.length) currentIndex++; else currentIndex = 0;
+console.log(currentIndex); // carousel.forEach(el =>
+el.classList.remove('carousel-active')); if
+(clicked.classList.contains('btn__testimonial')) {
+carousel[currentIndex].classList.add('carousel-active'); } }); /*
+.testimonial-section { padding: 9.6rem 0; position: relative; height: 100vh; }
+.testimonial-icon { width: 6.4rem; height: 6.4rem; color: #555; } .t_icon--s {
+width: 2.4rem; height: 2.4rem; } .testimonial-icon:hover { color: #222; }
+.t--icons { display: flex; justify-content: end; padding-right: 10rem; }
+.t--icons-edit { justify-content: center; margin-top: 4.4rem; } .testimonials {
+display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; }
+.testimonial-img { width: 30%; justify-self: center; border-radius: 100%;
+position: absolute; top: 0%; left: 50%; transform: translate(-50%, -50%); }
+.t__active { opacity: 1; transform: translateX(0); } .testimonial-container {
+padding: 4.8rem 4rem; position: relative; border-radius: 50px; max-width: 45rem;
+height: 45rem; } .testimonial__second { position: absolute; top: 50%; left: 50%;
+transform: translate(-50%, -50%); } .customer-testimonial, .customer-name,
+.customer-office { padding: 2.4rem 0; font-size: 2rem; line-height: 1.6;
+font-weight: 350; text-align: center; } .customer-name, .customer-office {
+padding: 0; font-size: 1.8rem; font-weight: 400; } .customer-name { padding-top:
+2rem; font-weight: 400; } .t-color-first { background-color: #fff; }
+.t-color-second { background-color: #d2f1eb; } .t-color-third {
+background-color: #f6fcfb; } */

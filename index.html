@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="general.css" />
   </head>
   <body>
-    <header class="main-nav">
+    <nav class="main-nav">
       <div class="logo-container">
         <p class="logo-text">HARPER RUSSO</p>
         <img
@@ -21,19 +21,17 @@
           class="logo"
         />
       </div>
-      <nav>
-        <div class="nav-links">
-          <ul>
-            <li><a class="links" href="#section--1">Home</a></li>
-            <li><a class="links" href="#section--2">Services</a></li>
-            <li><a class="links" href="#section--3">Features</a></li>
-            <li><a class="links" href="#section--4">Testimonials</a></li>
-            <li><a class="links" href="#section--5">Blog</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
+      <div class="nav-links">
+        <ul>
+          <li><a class="links" href="#section--1">Home</a></li>
+          <li><a class="links" href="#section--2">Services</a></li>
+          <li><a class="links" href="#section--3">Features</a></li>
+          <li><a class="links" href="#section--4">Testimonials</a></li>
+          <li><a class="links" href="#section--5">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header>
       <section class="header" id="section--1">
         <div class="header-content">
           <img
@@ -59,7 +57,9 @@
           </div>
         </div>
       </section>
+    </header>
 
+    <main>
       <section class="article-section" id="section--2">
         <article>
           <div class="article-content">
@@ -182,54 +182,172 @@
       </section>
 
       <section class="testimonial-section" id="section--4">
-        <div class="testimonials">
-          <div class="testimonial-container t-color-first">
-            <img
-              src="img/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
-              class="testimonial-img"
-              alt="An image of JADON DOE a customer"
-            />
-            <p class="customer-testimonial">
-              "A Clean Office Means a Happier Team! We've been flooded with
-              praise from clients about how well-organized our office looks.
-              It's had a huge positive impact on our team's morale and work
-              environment"
-            </p>
-            <p class="customer-name">JADON DOE</p>
-            <p class="customer-office">GLOBAL INNOVATIONS</p>
-          </div>
-          <div class="testimonial-container t-color-second">
-            <img
-              class="testimonial-img"
-              src="img/alex-suprun-mynsNaNwVDc-unsplash.jpg"
-              alt="An image of SARAH LEE a customer"
-            />
-            <p class="customer-testimonial">
+        <div class="carousel carousel-active">
+          <img class="t--image" src="img/maria.jpg" alt="Maria de Almeida" />
+          <blockquote class="testimonial">
+            <p class="testimonial-text">
               "Professional and Thorough! Our office has never looked this good!
               The cleaning team is always on time and pays special attention to
               high-traffic areas — just what we needed. Excellent service at a
-              great price!"
+              great price!"Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Velit, fuga. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Eum ipsa dolor dolores rem architecto saepe quia
+              aperiam accusantium pariatur fuga, id commodi quasi, dolore quae
+              voluptate sunt laboriosam facere numquam!
             </p>
-            <div>
-              <p class="customer-name">SARAH LEE</p>
-            </div>
-            <p class="customer-office">HOME OWNER</p>
-          </div>
-          <div class="testimonial-container t-color-first">
-            <img
-              class="testimonial-img"
-              src="img/sabbir-ahmed-n3dHcYWJcs8-unsplash.jpg"
-              alt="An image of MATHIUS SAM a customer"
-            />
-            <p class="customer-testimonial">
-              "Game-Changer for Our Home! As a busy mum, staying on top of
-              chores felt impossible — but this cleaning service has truly been
-              a lifesaver. The team is incredibly kind, professional, and
-              respectful"
+            <p class="testimonial-author">Maria de Almeida</p>
+            <p class="testimonial-job">Home Owner</p>
+          </blockquote>
+
+          <button class="btn__testimonial btn--left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button class="btn__testimonial btn--right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="carousel">
+          <img
+            class="t--image"
+            src="img/sabbir-ahmed-n3dHcYWJcs8-unsplash.jpg"
+            alt="Maria de Almeida"
+          />
+          <blockquote class="testimonial">
+            <p class="testimonial-text">
+              "A Clean Office Means a Happier Team! nesciunt aliquid ex atque
+              quibusdam. Rerum officia unde suscipit quo sunt hic illo fugit.
+              We've been flooded with praise from clients about how
+              well-organized our office looks. It's had a huge positive impact
+              on our team's morale and work environment Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Eius sed quisquam ab dolore
+              molestiae deleniti aspernatur non deserunt fugiat cum! Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Nulla, suscipit. "
             </p>
-            <p class="customer-name">MATHIUS SAM</p>
-            <p class="customer-office">BRIDGETON</p>
-          </div>
+            <p class="testimonial-author">Sabbir S Ahmed</p>
+            <p class="testimonial-job">
+              Senior Product Manager at EDP Comercial
+            </p>
+          </blockquote>
+
+          <button class="btn__testimonial btn--left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button class="btn__testimonial btn--right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="carousel">
+          <img
+            class="t--image"
+            src="img/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+            alt="Maria de Almeida"
+          />
+          <blockquote class="testimonial">
+            <p class="testimonial-text">
+              "Game-Changer for Our Home consectetur adipisicing elit. Officia
+              nesciunt aliquid ex atque quibusdam. Rerum officia unde suscipit
+              quo sunt hic illo fugit. As a busy mum, staying on top of chores
+              felt impossible — but this cleaning service has truly been a
+              lifesaver. The team is incredibly kind, professional, and
+              respectful Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Animi ullam reiciendis iusto numquam dolorem sint eaque
+              soluta. Aspernatur, illo veritatis. Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit."
+            </p>
+            <p class="testimonial-author">Mathius Sam</p>
+            <p class="testimonial-job">Realator at Bridgeton</p>
+          </blockquote>
+
+          <button class="btn__testimonial btn--left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button class="btn__testimonial btn--right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="dots">
+          <button class="dot dot--fill">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
         </div>
       </section>
 
@@ -296,136 +414,142 @@
             </p>
           </div>
         </div>
-        <div class="questions-container">
-          <div>
-            <span>
-              <p class="faq-questions">
-                Do I need to provide any cleaning supplies?
-              </p>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                distinctio ex, quae vel maiores optio temporibus accusamus
-                asperiores. Quas nemo aspernatur necessitatibus aperiam ab
-                adipisci eveniet facilis tempore reiciendis sunt!
-              </p>
-            </span>
-            <ion-icon
-              class="questions-icon open-icon"
-              name="add-circle-outline"
-            ></ion-icon
-            ><ion-icon
-              class="questions-icon close-icon hidden"
-              name="remove-outline"
-            ></ion-icon>
+        <div class="faq-all">
+          <div class="questions-container">
+            <div>
+              <span>
+                <p class="faq-questions">
+                  Do I need to provide any cleaning supplies?
+                </p>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  distinctio ex, quae vel maiores optio temporibus accusamus
+                  asperiores. Quas nemo aspernatur necessitatibus aperiam ab
+                  adipisci eveniet facilis tempore reiciendis sunt!
+                </p>
+              </span>
+              <ion-icon
+                class="questions-icon open-icon"
+                name="add-circle-outline"
+              ></ion-icon
+              ><ion-icon
+                class="questions-icon close-icon hidden"
+                name="remove-outline"
+              ></ion-icon>
+            </div>
           </div>
-        </div>
-        <div class="questions-container">
-          <div>
-            <span>
-              <p class="faq-questions">
-                How far in advance should I schedule a service?
-              </p>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                distinctio ex, quae vel maiores optio temporibus accusamus
-                asperiores. Quas nemo aspernatur necessitatibus aperiam ab
-                adipisci eveniet facilis tempore reiciendis sunt!
-              </p>
-            </span>
-            <ion-icon
-              class="questions-icon open-icon"
-              name="add-circle-outline"
-            ></ion-icon
-            ><ion-icon
-              class="questions-icon close-icon hidden"
-              name="remove-outline"
-            ></ion-icon>
+          <div class="questions-container">
+            <div>
+              <span>
+                <p class="faq-questions">
+                  How far in advance should I schedule a service?
+                </p>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  distinctio ex, quae vel maiores optio temporibus accusamus
+                  asperiores. Quas nemo aspernatur necessitatibus aperiam ab
+                  adipisci eveniet facilis tempore reiciendis sunt!
+                </p>
+              </span>
+              <ion-icon
+                class="questions-icon open-icon"
+                name="add-circle-outline"
+              ></ion-icon
+              ><ion-icon
+                class="questions-icon close-icon hidden"
+                name="remove-outline"
+              ></ion-icon>
+            </div>
           </div>
-        </div>
-        <div class="questions-container">
-          <div>
-            <span>
-              <p class="faq-questions">How do I book a cleaning appointment?</p>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                distinctio ex, quae vel maiores optio temporibus accusamus
-                asperiores. Quas nemo aspernatur necessitatibus aperiam ab
-                adipisci eveniet facilis tempore reiciendis sunt!
-              </p>
-            </span>
-            <ion-icon
-              class="questions-icon open-icon"
-              name="add-circle-outline"
-            ></ion-icon
-            ><ion-icon
-              class="questions-icon close-icon hidden"
-              name="remove-outline"
-            ></ion-icon>
+          <div class="questions-container">
+            <div>
+              <span>
+                <p class="faq-questions">
+                  How do I book a cleaning appointment?
+                </p>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  distinctio ex, quae vel maiores optio temporibus accusamus
+                  asperiores. Quas nemo aspernatur necessitatibus aperiam ab
+                  adipisci eveniet facilis tempore reiciendis sunt!
+                </p>
+              </span>
+              <ion-icon
+                class="questions-icon open-icon"
+                name="add-circle-outline"
+              ></ion-icon
+              ><ion-icon
+                class="questions-icon close-icon hidden"
+                name="remove-outline"
+              ></ion-icon>
+            </div>
           </div>
-        </div>
-        <div class="questions-container">
-          <div>
-            <span>
-              <p class="faq-questions">
-                Do you offer same-day or emergency cleaning?
-              </p>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                distinctio ex, quae vel maiores optio temporibus accusamus
-                asperiores. Quas nemo aspernatur necessitatibus aperiam ab
-                adipisci eveniet facilis tempore reiciendis sunt!
-              </p>
-            </span>
-            <ion-icon
-              class="questions-icon open-icon"
-              name="add-circle-outline"
-            ></ion-icon
-            ><ion-icon
-              class="questions-icon close-icon hidden"
-              name="remove-outline"
-            ></ion-icon>
+          <div class="questions-container">
+            <div>
+              <span>
+                <p class="faq-questions">
+                  Do you offer same-day or emergency cleaning?
+                </p>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  distinctio ex, quae vel maiores optio temporibus accusamus
+                  asperiores. Quas nemo aspernatur necessitatibus aperiam ab
+                  adipisci eveniet facilis tempore reiciendis sunt!
+                </p>
+              </span>
+              <ion-icon
+                class="questions-icon open-icon"
+                name="add-circle-outline"
+              ></ion-icon
+              ><ion-icon
+                class="questions-icon close-icon hidden"
+                name="remove-outline"
+              ></ion-icon>
+            </div>
           </div>
-        </div>
-        <div class="questions-container">
-          <div>
-            <span>
-              <p class="faq-questions">Is your company insured or bonded?</p>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                distinctio ex, quae vel maiores optio temporibus accusamus
-                asperiores. Quas nemo aspernatur necessitatibus aperiam ab
-                adipisci eveniet facilis tempore reiciendis sunt!
-              </p>
-            </span>
-            <ion-icon
-              class="questions-icon open-icon"
-              name="add-circle-outline"
-            ></ion-icon
-            ><ion-icon
-              class="questions-icon close-icon hidden"
-              name="remove-outline"
-            ></ion-icon>
+          <div class="questions-container">
+            <div>
+              <span>
+                <p class="faq-questions">Is your company insured or bonded?</p>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  distinctio ex, quae vel maiores optio temporibus accusamus
+                  asperiores. Quas nemo aspernatur necessitatibus aperiam ab
+                  adipisci eveniet facilis tempore reiciendis sunt!
+                </p>
+              </span>
+              <ion-icon
+                class="questions-icon open-icon"
+                name="add-circle-outline"
+              ></ion-icon
+              ><ion-icon
+                class="questions-icon close-icon hidden"
+                name="remove-outline"
+              ></ion-icon>
+            </div>
           </div>
-        </div>
-        <div class="questions-container">
-          <div>
-            <span>
-              <p class="faq-questions">Are your cleaners background-checked?</p>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                distinctio ex, quae vel maiores optio temporibus accusamus
-                asperiores. Quas nemo aspernatur necessitatibus aperiam ab
-                adipisci eveniet facilis tempore reiciendis sunt!
-              </p>
-            </span>
-            <ion-icon
-              class="questions-icon open-icon"
-              name="add-circle-outline"
-            ></ion-icon
-            ><ion-icon
-              class="questions-icon close-icon hidden"
-              name="remove-outline"
-            ></ion-icon>
+          <div class="questions-container">
+            <div>
+              <span>
+                <p class="faq-questions">
+                  Are your cleaners background-checked?
+                </p>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  distinctio ex, quae vel maiores optio temporibus accusamus
+                  asperiores. Quas nemo aspernatur necessitatibus aperiam ab
+                  adipisci eveniet facilis tempore reiciendis sunt!
+                </p>
+              </span>
+              <ion-icon
+                class="questions-icon open-icon"
+                name="add-circle-outline"
+              ></ion-icon
+              ><ion-icon
+                class="questions-icon close-icon hidden"
+                name="remove-outline"
+              ></ion-icon>
+            </div>
           </div>
         </div>
       </section>
