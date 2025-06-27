@@ -147,4 +147,19 @@ font-weight: 350; text-align: center; } .customer-name, .customer-office {
 padding: 0; font-size: 1.8rem; font-weight: 400; } .customer-name { padding-top:
 2rem; font-weight: 400; } .t-color-first { background-color: #fff; }
 .t-color-second { background-color: #d2f1eb; } .t-color-third {
-background-color: #f6fcfb; } */
+background-color: #f6fcfb; } */ /* // //Testimonial scroll let currentIndex = 0;
+//Initially show the first testimonial
+carousel[currentIndex].classList.add('carousel-active'); const dots =
+document.querySelectorAll('.dot'); //Events
+testimonial.addEventListener('click', function (e) { e.preventDefault(); const
+clicked = e.target.closest('.btn__testimonial'); if (!clicked) return; //Remove
+active class from current carousel.forEach(c =>
+c.classList.remove('carousel-active')); dots.forEach(d =>
+d.classList.remove('dot--fill')); //Checks if the correct button was clicked and
+displays the next testimonial if
+(clicked.classList.contains('btn__testimonial')) { if
+(clicked.classList.contains('btn--left')) { currentIndex--; if (currentIndex <
+0) currentIndex = carousel.length - 1; } else currentIndex++; if (currentIndex <
+carousel.length) { } else { currentIndex = 0; }
+dots[currentIndex].classList.add('dot--fill');
+carousel[currentIndex].classList.add('carousel-active'); } }); */
