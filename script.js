@@ -1,25 +1,52 @@
 'use strict';
 
 const header = document.querySelector('header');
-const nav = document.querySelector('nav');
-const displayFaqAnswer = document.querySelectorAll('.questions-container');
 const btnScroll = document.querySelector('.header-btn');
+const nav = document.querySelector('nav');
+const navLinks = document.querySelector('.nav-links');
 const sectionArticle = document.querySelector('.article-section');
 const link = document.querySelectorAll('.links');
 const testimonial = document.querySelector('.testimonial-section');
 const carousel = [...document.querySelectorAll('.carousel')];
+const displayFaqAnswer = document.querySelectorAll('.questions-container');
+const faqAll = document.querySelector('.faq-all');
 
 btnScroll.addEventListener('click', function (e) {
   e.preventDefault();
   sectionArticle.scrollIntoView({ behavior: 'smooth' });
-
-  // console.log(sectionArticle.getBoundingClientRect());
-  // console.log(btnScroll.getBoundingClientRect());
 });
+
+//Lazy loading
+const lazyLoad = function () {
+  const imgTargets = document.querySelectorAll('img[data-src]');
+
+  const load = function (entries, observer) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    entry.target.src = entry.target.dataset.src;
+    console.log();
+
+    entry.target.addEventListener('load', function () {
+      entry.target.classList.remove('lazy-img');
+    });
+    observer.unobserve(entry.target);
+  };
+
+  const imgObserver = new IntersectionObserver(load, {
+    root: null,
+    threshold: 0,
+    rootMargin: '300px',
+  });
+
+  imgTargets.forEach(img => imgObserver.observe(img));
+};
+lazyLoad();
 
 //Page Navigation
 
-document.querySelector('.nav-links').addEventListener('click', function (e) {
+navLinks.addEventListener('click', function (e) {
   e.preventDefault();
 
   if (e.target.classList.contains('links')) {
@@ -30,14 +57,14 @@ document.querySelector('.nav-links').addEventListener('click', function (e) {
 });
 
 //Sticky Navigation
-
-const navHeight = nav.getBoundingClientRect().height;
+// getBoundingClientRect().height
+const navHeight = nav.offsetHeight;
 const stickyNav = function (entries) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) {
     nav.classList.add('nav-sticky');
-    document.body.style.paddingTop = `-${navHeight}px`;
+    document.body.style.paddingTop = `${navHeight}px`;
   } else {
     nav.classList.remove('nav-sticky');
     document.body.style.paddingTop = `0px`;
@@ -74,32 +101,10 @@ sectionAll.forEach(el => {
   el.classList.add('section--hidden');
 });
 
-//Faq questions Toggle
-
-document.querySelector('.faq-all').addEventListener('click', function (e) {
-  e.preventDefault();
-
-  const container = e.target.closest('.questions-container');
-
-  if (!container) return;
-  console.log(e.target);
-
-  if (container.classList.contains('questions-container')) {
-    const answer = container.querySelector('.faq-answer');
-    const openIcon = container.querySelector('.open-icon');
-    const closeIcon = container.querySelector('.close-icon');
-
-    answer.classList.toggle('hidden');
-    openIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-  }
-});
-
 //Slider
 
 const slide = function () {
   const carouselSlides = document.querySelectorAll('.slide');
-  const slider = document.querySelector('.slider');
   const btnLeft = document.querySelector('.slider__btn--left');
   const btnRight = document.querySelector('.slider__btn--right');
   const dotContainer = document.querySelector('.dots');
@@ -180,3 +185,24 @@ const slide = function () {
   });
 };
 slide();
+
+//Faq questions Toggle
+
+faqAll.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const container = e.target.closest('.questions-container');
+
+  if (!container) return;
+  console.log(e.target);
+
+  if (container.classList.contains('questions-container')) {
+    const answer = container.querySelector('.faq-answer');
+    const openIcon = container.querySelector('.open-icon');
+    const closeIcon = container.querySelector('.close-icon');
+
+    answer.classList.toggle('hidden');
+    openIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  }
+});
