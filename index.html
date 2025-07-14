@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saint's second project</title>
+    <link rel="preload" as="image" href="/img/hero-2.jpg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
@@ -15,24 +16,22 @@
   </head>
   <body>
     <header class="header" id="section--1">
+      <div class="logo-container">
+        <p class="logo-text">HARPER RUSSO</p>
+        <img
+          src="img/Black_and_White_Circle_Icon_Business_Logo-removebg-preview-removebg-preview.png"
+          alt="Harper Russo logo"
+          class="logo"
+        />
+      </div>
       <nav class="main-nav">
-        <div class="logo-container">
-          <p class="logo-text">HARPER RUSSO</p>
-          <img
-            src="img/Black_and_White_Circle_Icon_Business_Logo-removebg-preview-removebg-preview.png"
-            alt="Harper Russo logo"
-            class="logo"
-          />
-        </div>
-        <div class="nav-links">
-          <ul>
-            <li><a class="links" href="#section--1">Home</a></li>
-            <li><a class="links" href="#section--2">Services</a></li>
-            <li><a class="links" href="#section--3">Features</a></li>
-            <li><a class="links" href="#section--4">Testimonials</a></li>
-            <li><a class="links" href="#section--5">Blog</a></li>
-          </ul>
-        </div>
+        <ul class="nav-links">
+          <li><a class="links" href="#section--1">Home</a></li>
+          <li><a class="links" href="#section--2">Services</a></li>
+          <li><a class="links" href="#section--3">Features</a></li>
+          <li><a class="links" href="#section--4">Testimonials</a></li>
+          <li><a class="links" href="#section--5">Blog</a></li>
+        </ul>
         <button class="btn-mobile-nav">
           <ion-icon
             class="open-btn icon-mobile-nav"
@@ -42,8 +41,17 @@
           </ion-icon>
         </button>
       </nav>
+    </header>
 
-      <div class="header-content">
+    <main>
+      <section class="header-content">
+        <img
+          class="hero-img"
+          src="/img/hero-2.jpg"
+          alt="Woman cleaning"
+          loading="eager"
+          fetchpriority="high"
+        />
         <div class="header-sub-content">
           <span>
             <ion-icon class="icons" name="color-fill-outline"></ion-icon>
@@ -59,24 +67,11 @@
             <a href="#" class="header-btn btn-scroll--hero"> EXPLORE NOW </a>
           </div>
         </div>
-      </div>
-    </header>
-
-    <main>
+      </section>
       <section class="section article-section" id="section--2">
         <article>
           <div class="article-content">
-            <div class="first-grid">
-              <img
-                src="img/lazy-beazy-_9gxlIXdqDQ-unsplash-min-min.jpg"
-                data-src="img/beazy-_9gxlIXdqDQ-unsplash.jpg"
-                class="article-img lazy-img"
-                loading="lazy"
-                alt=" An image showing the cleaning features of HARPER RUSSO"
-              />
-            </div>
-
-            <div class="article-second-grid">
+            <div class="article-first-grid">
               <span class="article-sub-content"
                 ><ion-icon class="icons" name="home-outline"></ion-icon>
                 <p class="header-sub-content-text">REGULAR</p>
@@ -90,9 +85,18 @@
                 <a href="#" class="header-btn"> EXPLORE NOW </a>
               </div>
             </div>
+            <div class="center">
+              <img
+                src="img/beazy-_9gxlIXdqDQ-unsplash-use.jpg"
+                data-src="img/beazy-_9gxlIXdqDQ-unsplash-use.jpg"
+                class="article-img lazy-img"
+                loading="lazy"
+                alt=" An image showing the cleaning features of HARPER RUSSO"
+              />
+            </div>
           </div>
 
-          <div class="article-second-content">
+          <div class="article-content s-g-size">
             <div class="article-second-grid">
               <span class="article-sub-content"
                 ><ion-icon class="icons" name="planet-outline"></ion-icon>
@@ -107,7 +111,7 @@
                 <a href="#" class="header-btn"> EXPLORE NOW </a>
               </div>
             </div>
-            <div class="first-grid">
+            <div class="first-grid center">
               <img
                 src="img/lazy-annie-spratt-4zUX9r32aA4-unsplash-min-min.jpg"
                 data-src="img/annie-spratt-4zUX9r32aA4-unsplash.jpg"
@@ -180,7 +184,7 @@
               <img
                 class="features-img"
                 loading="lazy"
-                src="img/clay-banks-e6pK_snssSY-unsplash.jpg"
+                src="img/clay-banks-e6pK_snssSY-unsplash.avif"
                 alt="A cleaner's
               image"
               />
@@ -277,12 +281,13 @@
             </div>
           </div>
 
-          <!-- &rarr; -->
-          <!-- &larr -->
-          <button class="slider__btn slider__btn--left">
+          <button aria-label="Move left" class="slider__btn slider__btn--left">
             <ion-icon name="chevron-back-outline"></ion-icon>
           </button>
-          <button class="slider__btn slider__btn--right">
+          <button
+            aria-label="Move Right"
+            class="slider__btn slider__btn--right"
+          >
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </button>
           <div class="dots"></div>
@@ -500,7 +505,7 @@
       </section>
 
       <section class="section cta-section">
-        <div class="cta-container">
+        <div class="cta-container" data-bg="url(img/cta-image.jpg)">
           <div class="cta-icon">
             <img
               src="https://cdn-icons-png.flaticon.com/512/477/477406.png"
@@ -523,7 +528,7 @@
               placeholder="Enter your email"
               required
             />
-            <button type="submit">
+            <button aria-label="submit" type="submit">
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </button>
           </form>
@@ -544,18 +549,18 @@
 
             <ul class="social-links">
               <li>
-                <a class="footer-link" href="#"></a
+                <a class="footer-link" href="#" aria-label="Instagram"></a
                 ><ion-icon
                   class="social-icons"
                   name="logo-instagram"
                 ></ion-icon>
               </li>
               <li>
-                <a class="footer-link" href="#"></a
+                <a class="footer-link" href="#" aria-label="Facebook"></a
                 ><ion-icon class="social-icons" name="logo-facebook"></ion-icon>
               </li>
               <li>
-                <a class="footer-link" href="#"></a
+                <a class="footer-link" href="#" aria-label="X"></a
                 ><ion-icon class="social-icons" name="logo-twitter"></ion-icon>
               </li>
             </ul>
