@@ -668,8 +668,7 @@ nav {
   /* justify-content: center; */
 }
 .grid--footer {
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
-  justify-content: center;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 }
 .logo-col {
   display: flex;

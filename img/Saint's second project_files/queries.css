@@ -373,7 +373,6 @@
     visibility: none;
     transition: all 1s ease;
     border-radius: 10px;
-    padding: 4.4rem;
   }
 
   .nav-open {
@@ -382,7 +381,7 @@
   }
   .links:link,
   .links:visited {
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-transform: uppercase;
   }
   .logo-container {
