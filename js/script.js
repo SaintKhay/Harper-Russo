@@ -85,6 +85,7 @@ const stickyNav = function (entries) {
   } else {
     nav.classList.remove('nav-sticky');
     document.body.style.paddingTop = `0px`;
+    nav.style.transform = 'translateY(-1rem)';
   }
 };
 
